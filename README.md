@@ -1,4 +1,4 @@
-# 🖥 Task-6
+# 🖥 Smart Home
 
 Fashion website markup
 
