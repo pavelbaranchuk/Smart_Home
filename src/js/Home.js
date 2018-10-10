@@ -1,5 +1,5 @@
 export class Home {
-  constructor(address, color, postalCode) {
+  constructor(address, postalCode) {
     this._address = address;
     this._color = color;
     this._postalCode = postalCode;
@@ -7,10 +7,6 @@ export class Home {
   }
 
   get address() {
-    return this._address;
-  }
-
-  get color() {
     return this._address;
   }
 
@@ -31,7 +27,7 @@ export class Home {
     this._devices.splice(index, 1);
   }
 
-  getDeviceByNamer(name) {
+  getDeviceByName(name) {
     let res;
     this._devices.forEach(device => {
       if (device.name === name) {
