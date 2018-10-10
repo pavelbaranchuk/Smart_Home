@@ -1,4 +1,4 @@
-export class Appliance {
+export class Appliances {
   constructor(name, madeIn, status) {
     this._name = name;
     this._madeIn = madeIn;
