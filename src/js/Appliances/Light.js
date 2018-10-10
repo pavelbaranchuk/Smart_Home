@@ -7,8 +7,8 @@ const DEFAULT_MODE = "Shine";
 const CLAP_VALUE = true;
 
 export class Light extends Appliances {
-  constructor(intensity, mode, clap) {
-    super(intensity, mode, clap);
+  constructor(name, madeIn, status) {
+    super(name, madeIn, status);
     this._intensity = DEFAULT_VALUE;
     this._mode = DEFAULT_MODE;
     this._clap = CLAP_VALUE;

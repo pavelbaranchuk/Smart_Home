@@ -1,7 +1,6 @@
 export class Home {
   constructor(address, postalCode) {
     this._address = address;
-    this._color = color;
     this._postalCode = postalCode;
     this._devices = [];
   }
