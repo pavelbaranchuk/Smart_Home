@@ -36,7 +36,9 @@ export default class Tv extends Devices {
   set currentChannel(currentChannel) {
     if (this._currentChannel.indexOf(this._channelList) !== -1) {
       this._currentChannel = currentChannel;
-    } else throw new Error("The channel does not exist");
+    } else {
+      throw new Error("The channel does not exist");
+    }
   }
 
   get soundVolume() {
@@ -46,7 +48,9 @@ export default class Tv extends Devices {
   set soundVolume(soundVolume) {
     if (soundVolume <= this._maxVolume && soundVolume >= this._minVolume) {
       this._soundVolume = soundVolume;
-    } else throw new Error("The value is incorrect");
+    } else {
+      throw new Error("The value is incorrect");
+    }
   }
 
   nextChannel() {

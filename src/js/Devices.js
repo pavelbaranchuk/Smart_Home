@@ -1,9 +1,11 @@
+let id = 0;
+
 export default class Devices {
   constructor(name, info) {
     this._name = name;
     this._info = info;
     this._isOn = false;
-    this._id = Date.now();
+    this._id = id++;
   }
   get name() {
     return this._name;
@@ -41,7 +43,11 @@ export default class Devices {
     }
   }
 
-  switchOnOff(isOn) {
-    this._isOn = !isOn;
+  switchOnOff() {
+    if (this._isOn) {
+      this._isOn = false;
+    } else {
+      this._isOn = true;
+    }
   }
 }

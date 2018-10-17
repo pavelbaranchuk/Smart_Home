@@ -21,10 +21,11 @@ export default class Home {
     return [...this._devices];
   }
 
-  addDNewDevice(device) {
+  addNewDevice(device) {
     if (!this._devices.has(device.name)) {
       this._devices.set(device.id, device);
     } else {
+      //Do
       throw new Error("The device name is exist already");
     }
   }
@@ -42,6 +43,6 @@ export default class Home {
   }
 
   turnOffAllDevices() {
-    this._devices.forEach(device => device.turnOff());
+    this._devices.clear;
   }
 }

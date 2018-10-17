@@ -8,7 +8,6 @@ export default class CoffeeMachine extends Devices {
     this._size = this._sizeList[1];
     this._sizeList = ["S", "M", "XL"];
     this._spices = false;
-    this._milk = false;
     this._coffeeList = ["Americano", "Latte", "Black"];
   }
 
@@ -27,6 +26,8 @@ export default class CoffeeMachine extends Devices {
   set size(size) {
     if (this._sizeList.indexOf(size) !== -1) {
       this._size = size;
+    } else {
+      throw new Error("The value is incorrect");
     }
   }
 
@@ -37,6 +38,8 @@ export default class CoffeeMachine extends Devices {
   set typeOfCoffee(typeOfCoffee) {
     if (this._coffeeList.indexOf(typeOfCoffee) !== -1) {
       this._typeOfCoffee = typeOfCoffee;
+    } else {
+      throw new Error("The value is incorrect");
     }
   }
 
@@ -54,13 +57,5 @@ export default class CoffeeMachine extends Devices {
 
   set spices(spices) {
     this._spices = spices;
-  }
-
-  get milk() {
-    return this._milk;
-  }
-
-  set milk(milk) {
-    this._milk = milk;
   }
 }

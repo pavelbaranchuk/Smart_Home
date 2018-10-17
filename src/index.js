@@ -9,5 +9,5 @@ const light = new Light("Light", "Default text");
 console.log(light);
 const tv = new Tv("LG flatron w2243s", "Default text");
 console.log(tv);
-const coffeeMachine = new CoffeeMachine("Coffee Machine", "Default text");
-console.log(coffeeMachine);
+// const coffeeMachine = new CoffeeMachine("Coffee Machine", "Default text");
+// console.log(coffeeMachine);
