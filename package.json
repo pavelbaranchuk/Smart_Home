@@ -1,22 +1,14 @@
 {
-  "name": "task-5",
+  "name": "task-7",
   "version": "1.0.0",
-  "description": "Webpack setup &amp; website markup",
+  "description": "Smart home",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pavelbaranchuk/Task-5.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pavelbaranchuk/Task-5/issues"
-  },
-  "homepage": "https://github.com/pavelbaranchuk/Task-5#readme",
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "css-hot-loader": "^1.4.2",

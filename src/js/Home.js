@@ -1,38 +1,47 @@
-export class Home {
-  constructor(address, postalCode) {
+export default class Home {
+  constructor(address, owner) {
     this._address = address;
-    this._postalCode = postalCode;
-    this._devices = [];
+    this._owner = owner;
+    this._devices = new Map();
   }
 
   get address() {
     return this._address;
   }
 
-  get postalCode() {
-    return this._postalCode;
+  get owner() {
+    return this._owner;
+  }
+
+  set owner(name) {
+    this._owner = name;
   }
 
   get devices() {
-    return this._devices;
+    return [...this._devices];
   }
 
-  addDevice(device) {
-    this._devices.push(device);
+  addDNewDevice(device) {
+    if (!this._devices.has(device.name)) {
+      this._devices.set(device.id, device);
+    } else {
+      throw new Error("The device name is exist already");
+    }
   }
 
   removeDevice(device) {
-    let index = this._devices.indexOf(device);
-    this._devices.splice(index, 1);
+    if (this._devices.has(device.id)) {
+      this._devices.delete(device.id);
+    } else {
+      throw new Error("The device does not exist");
+    }
   }
 
-  getDeviceByName(name) {
-    let res;
-    this._devices.forEach(device => {
-      if (device.name === name) {
-        res = device;
-      }
-    });
-    return res;
+  deleteAllDevices() {
+    this._devices.forEach(device => removeDevice(device));
+  }
+
+  turnOffAllDevices() {
+    this._devices.forEach(device => device.turnOff());
   }
 }
