@@ -311,7 +311,7 @@ export default class View {
       window.print();
     });
 
-    //Start page
+    //Start page----------------------------------------------
 
     let start = document.createElement("main");
     start.classList.add("main-content", "main-home", "mdc-hidden");
@@ -399,7 +399,8 @@ export default class View {
     start_button_list_span_devices.appendChild(start_button_list_link_owner);
     start_button_list_link_owner.appendChild(start_button_list_span_owner);
 
-    //Main-devices section
+    //Main-devices section----------------------------------------------
+
     let devices = document.createElement("div");
     devices.classList.add(
       "main-devices",
@@ -410,5 +411,146 @@ export default class View {
     devices.setAttribute("id", "main-content");
 
     root.appendChild(devices);
+
+    //Main-light section----------------------------------------------
+    //Left panel
+
+    let light = document.createElement("main");
+    light.classList.add("main-light", "mdc-top-app-bar--fixed-adjust", "main");
+
+    let light_wrapper_left = document.createElement("div");
+
+    devices.appendChild(light);
+    light.appendChild(light_wrapper_left);
+
+    let light_title = document.createElement("h2");
+    light_title.innerText = "Default name";
+
+    let light_image_wrapper = document.createElement("div");
+    light_image_wrapper.classList.add(
+      "mdc-card",
+      "mdc-card__light",
+      "mdc-card-first",
+      "mdc-card-first-light",
+      "card__light"
+    );
+
+    let light_card = document.createElement("div");
+    light_card.classList.add("card__light");
+
+    let light_image = document.createElement("img");
+    light_image.classList.add("mdc-card__image", "mdc__color-yellow");
+    light_image.setAttribute("src", "../assets/img/yellow_light_cropped.png");
+
+    let light_card_second = document.createElement("div");
+    light_card_second.classList.add(
+      "mdc-card",
+      "mdc-card-second",
+      "mdc-card-second-light",
+      "mdc-hidden"
+    );
+
+    let light_card_second_title = document.createElement("h3");
+    light_card_second_title.classList.add("card__title");
+    light_card_second_title.innerText = "Ligh specification";
+
+    let light_card_second_description = document.createElement("p");
+    light_card_second_description.classList.add("card__paragraph");
+    light_card_second_description.innerText =
+      "Please, fill the fiels at the right side and write the device description";
+
+    light_wrapper_left.appendChild(light_title);
+    light_wrapper_left.appendChild(light_image_wrapper);
+    light_image_wrapper.appendChild(light_card);
+    light_card.appendChild(light_image);
+    light_wrapper_left.appendChild(light_card_second);
+    light_card_second.appendChild(light_card_second_title);
+    light_card_second.appendChild(light_card_second_description);
+
+    // "Select" funcionality
+    let light_card_tab_wrapper = document.createElement("div");
+    light_card_tab_wrapper.classList.add("mdc-tab-bar");
+
+    let light_card_tab_scroller = document.createElement("div");
+    light_card_tab_scroller.classList.add("mdc-tab-scroller");
+
+    let light_card_tab_scroll_area = document.createElement("div");
+    light_card_tab_scroll_area.classList.add("mdc-tab-scroller__scroll-area");
+
+    let light_card_tab_scroll_content = document.createElement("div");
+    light_card_tab_scroll_content.classList.add(
+      "mdc-tab-scroller__scroll-content"
+    );
+
+    let light_card_button_main = document.createElement("button");
+    light_card_button_main.classList.add(
+      "mdc-tab",
+      "mdc-tab-first",
+      "mdc-tab-first-light",
+      "mdc-tab--active"
+    );
+    light_card_button_main.setAttribute("role", "tab");
+    light_card_button_main.setAttribute("aria-selected", "true");
+    light_card_button_main.setAttribute("tabindex", "0");
+
+    let light_card_span_left_content = document.createElement("span");
+    light_card_span_left_content.classList.add("mdc-tab__content");
+
+    let light_card_span_left_icon = document.createElement("span");
+    light_card_span_left_icon.classList.add("mdc-tab__content");
+
+    let light_card_span_left_label = document.createElement("span");
+    light_card_span_left_label.classList.add("mdc-tab__content");
+
+    let light_card_span_left_ripple = document.createElement("span");
+    light_card_span_left_ripple.classList.add("mdc-tab__content");
+
+    let light_card_button_info = document.createElement("button");
+    light_card_button_info.classList.add(
+      "mdc-tab",
+      "mdc-tab-second",
+      "mdc-tab-second-light",
+      "mdc-tab--active"
+    );
+    light_card_button_info.setAttribute("role", "tab");
+    light_card_button_info.setAttribute("aria-selected", "true");
+    light_card_button_info.setAttribute("tabindex", "1");
+
+    let light_card_span_right_content = document.createElement("span");
+    light_card_span_right_content.classList.add("mdc-tab__content");
+
+    let light_card_span_right_icon = document.createElement("span");
+    light_card_span_right_icon.classList.add("mdc-tab__content");
+
+    let light_card_span_right_label = document.createElement("span");
+    light_card_span_right_label.classList.add("mdc-tab__content");
+
+    let light_card_span_right_ripple = document.createElement("span");
+    light_card_span_right_ripple.classList.add("mdc-tab__content");
+
+    light_wrapper_left.appendChild(light_card_tab_wrapper);
+    light_card_tab_wrapper.appendChild(light_card_tab_scroller);
+    light_card_tab_scroller.appendChild(light_card_tab_scroll_area);
+    light_card_tab_scroll_area.appendChild(light_card_tab_scroll_content);
+
+    light_card_tab_scroll_content.appendChild(light_card_button_main);
+    light_card_button_main.appendChild(light_card_span_left_content);
+    light_card_span_left_content.appendChild(light_card_span_left_icon);
+    light_card_span_left_content.appendChild(light_card_span_left_label);
+    light_card_button_main.appendChild(light_card_span_left_ripple);
+
+    light_card_tab_scroll_content.appendChild(light_card_button_info);
+    light_card_button_info.appendChild(light_card_span_right_content);
+    light_card_span_right_content.appendChild(light_card_span_right_icon);
+    light_card_span_right_content.appendChild(light_card_span_right_label);
+    light_card_button_info.appendChild(light_card_span_right_ripple);
+
+    //Right panel-----------------------------------------
+    let light_wrapper_right = document.createElement("div");
+
+    light.appendChild(light_wrapper_right);
+
+    let light_select = document.createElement("div");
+    light_select.classList.add("select__wrapper");
   }
 }
