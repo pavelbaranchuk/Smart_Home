@@ -3,12 +3,12 @@ import Devices from "./Devices";
 export default class CoffeeMachine extends Devices {
   constructor(name, info) {
     super(name, info);
+    this._coffeeList = ["Americano", "Latte", "Black"];
     this._typeOfCoffee = this._coffeeList[0];
     this._sugarQty = 2;
-    this._size = this._sizeList[1];
     this._sizeList = ["S", "M", "XL"];
+    this._size = this._sizeList[1];
     this._spices = false;
-    this._coffeeList = ["Americano", "Latte", "Black"];
   }
 
   get sugarQty() {
