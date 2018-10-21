@@ -58,28 +58,28 @@
 
   &__left {
     margin-bottom: 0.3rem;
-    top: 13.5rem;
+    top: 12.5rem;
     left: 4.6rem;
     position: absolute;
   }
 
   &__mode {
     margin-bottom: 0.3rem;
-    top: 14.7rem;
+    top: 13rem;
     left: 4.6rem;
     position: absolute;
   }
 
   &__right {
     margin-bottom: 0.3rem;
-    top: 16rem;
+    top: 15rem;
     left: 4.6rem;
     position: absolute;
   }
 
   &__volume {
-    top: 18.3rem;
-    left: 4.2rem;
+    top: 16rem;
+    left: 5rem;
     position: absolute;
   }
 
@@ -90,66 +90,16 @@
   &__horizontal {
     display: flex;
     flex-direction: row;
-    top: 8.5rem;
-    left: 6.5rem;
+    top: 9rem;
+    left: 6rem;
     position: absolute;
-  }
-
-  &__vertical {
-    display: flex;
-    flex-direction: column;
   }
 }
 
-// .mdc__color {
-//   opacity: 0.2;
-// }
-
-.volume {
-  &__1 {
-    :hover {
-      opacity: 0.1;
-    }
-  }
-  &__2 {
-    :hover {
-      opacity: 0.2;
-    }
-  }
-  &__3 {
-    :hover {
-      opacity: 0.3;
-    }
-  }
-  &__4 {
-    :hover {
-      opacity: 0.4;
-    }
-  }
-  &__5 {
-    :hover {
-      opacity: 0.5;
-    }
-  }
-  &__6 {
-    :hover {
-      opacity: 0.6;
-    }
-  }
-  &__7 {
-    :hover {
-      opacity: 0.7;
-    }
-  }
-  &__8 {
-    :hover {
-      opacity: 0.85;
-    }
-  }
-  &__9 {
-    :hover {
-      opacity: 1;
-    }
+.volume__title {
+  line-height: 0;
+  &-tv {
+    margin: 1.3rem 0 0 0;
   }
 }
 

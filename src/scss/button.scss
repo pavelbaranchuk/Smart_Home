@@ -27,6 +27,7 @@
     display: flex;
     align-self: center;
   }
+  @include mdc-button-filled-accessible(#4648cf);
 }
 
 .mdc-button {
@@ -35,11 +36,17 @@
   &-onoff {
     margin-top: 2rem;
     width: 100%;
-    @include mdc-button-filled-accessible(#008116);
+    @include mdc-button-filled-accessible(#2426bb);
   }
 
   &-left {
-    margin-right: 10vw;
+    margin-right: 5vw;
+    @include mdc-button-filled-accessible(#4648cf);
+  }
+
+  &-right {
+    margin-right: 5vw;
+    @include mdc-button-filled-accessible(#4648cf);
   }
 
   &-delete {
@@ -67,52 +74,19 @@
     @include mdc-button-filled-accessible(#008116);
     &-up {
       @include mdc-button-filled-accessible(#008116);
-      width: 2rem;
-      height: 2rem;
-      font-size: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 2.5rem;
       border-radius: 0.3rem;
       margin: 0 1.5rem 0.5rem 0;
     }
     &-down {
       @include mdc-button-filled-accessible(#008116);
-      width: 2rem;
-      height: 2rem;
-      font-size: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 2.5rem;
       border-radius: 0.3rem;
       margin: 0 1.5rem 0.5rem 0;
     }
-  }
-
-  &-volume {
-    &-up {
-      @include mdc-button-filled-accessible(#008116);
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      margin: 0 1.5rem 0.5rem 0;
-    }
-    &-down {
-      @include mdc-button-filled-accessible(#008116);
-      width: 2rem;
-      height: 2rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      margin: 0 1.5rem 0.5rem 0;
-    }
-  }
-}
-
-.mdc-fab {
-  &-volume {
-    width: 0.7rem;
-    height: 2.5rem;
-  }
-
-  &-corner {
-    width: 1.6rem;
-    top: -0.8rem;
-    color: black;
-    font-size: 1rem;
   }
 }

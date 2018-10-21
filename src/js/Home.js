@@ -18,7 +18,7 @@ export default class Home {
   }
 
   get devices() {
-    return [...this._devices];
+    return [...this._devices.values()];
   }
 
   addNewDevice(device) {

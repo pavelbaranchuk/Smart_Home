@@ -3,7 +3,8 @@ let id = 0;
 export default class Devices {
   constructor(name, info) {
     this._name = name;
-    this._info = info;
+    this._info =
+      "Please, fill the fields at the right side and write the device description";
     this._isOn = false;
     this._id = id++;
   }
