@@ -20,7 +20,7 @@ export default class Devices {
     return this._info;
   }
 
-  set name(info) {
+  set info(info) {
     this._info = info;
   }
 

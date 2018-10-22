@@ -569,6 +569,7 @@ export default class mainView {
           "mdc-dialog__button",
           `mdc-dialog__${device.id}`
         );
+
         light_dialog_btn_delete.setAttribute("type", "button");
         light_dialog_btn_delete.setAttribute(
           "data-mdc-dialog-action",
@@ -1560,17 +1561,60 @@ export default class mainView {
     });
 
     // JS for the Delete button
-    // `mdc-dialog__${device.id}`
-    // const buttonDelete = MDCRipple.attachTo(
-    //   document.querySelector(`.mdc-dialog__${device.id}`)
-    // );
+    this._home.devices.forEach(device => {
+      let checkArray = [];
+      let k = 0;
+      checkArray[k] = MDCRipple.attachTo(
+        document.querySelector(`.mdc-dialog__${device.id}`)
+      );
+      checkArray[k].listen("click", () => {
+        this._home.removeDevice(device);
+        this.render();
+      });
 
-    // buttonDelete.listen("click", () => {
-    //   this._home.devices.id.removeDevice();
-    // });
-    // ------------------------------------
+      k++;
+    });
 
     //Input field JS logic
+
+    // this._home.devices.forEach(device => {
+    //   let lightNameInputs = [];
+    //   let k = 0;
+    //   lightNameInputs[k] = MDCTextField.attachTo(
+    //     document.querySelector(`.mdc-text-field-${device.id}`)
+    //   );
+
+    //   lightNameInputs[k].listen("keypress", () => {
+    //     device.info(lightNameInput.value);
+    //     this.render();
+    //   });
+    //   k++;
+
+    // console.log(document.querySelector(`.mdc-text-field-${device.id}`));
+    // console.log(
+    //   MDCTextField.attachTo(
+    //     document.querySelector(`.mdc-text-field-${device.id}`)
+    //   )
+    // );
+    // });
+
+    // this._home.devices.forEach(device => {
+    //   const lightNameInput = MDCTextField.attachTo(
+    //     document.querySelector(`.mdc-text-field-${device.id}`)
+    //   );
+
+    // light_select_name_input.listen("keypress", () => {
+    //   light_title.innerText = light_select_name_input.value;
+    // });
+
+    // const lightNameInput = MDCTextField.attachTo(
+    //   document.querySelector(`.mdc-text-field-${device.id}`)
+    // );
+
+    //   lightNameInput.listen("keypress", () => {
+    //     light_title.innerText = lightNameInput.value;
+    //   });
+    // });
 
     // const lightNameInput = MDCTextField.attachTo(
     //   document.querySelector(`.mdc-text-field-${device.id}`)
